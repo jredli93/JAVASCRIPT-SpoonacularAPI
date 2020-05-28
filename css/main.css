@@ -2,19 +2,28 @@
   --mainWhite: #f5f5f5;
   --mainBlack: #333333;
   --mainBlue: #9edaef;
+  --bg: #fdfdfd;
+  --highlight1: #ed4264;
+  --highlight2: #ffedbc;
+  --color: #1a1e24;
 }
 body {
-  background: var(--mainWhite);
+  /* background: var(--mainWhite); */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('../img/Vintage-cooking-pattern-seamless-vectors-06.jpg');
   color: #333333;
 }
 .submitBtn,
 .reposBtn {
-  border-color: var(--mainBlue);
-  background: transparent;
-  color: var(--mainBlue);
+  border-color: #3333331a;
+  background: #ec3333;
+  color: #ffffff;
 }
 .submitBtn:hover {
-  background: var(--mainBlue);
+  background: #ffe398;
   color: var(--mainBlack);
 }
 .reposBtn:hover {
@@ -34,4 +43,77 @@ body {
 .user-repos {
   height: 20rem;
   overflow: scroll !important;
+}
+
+.single-user {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+.list {
+  list-style: none;
+  width: 600px;
+  max-width: 90%;
+}
+
+.item {
+  display: block;
+  clear: both;
+  counter-increment: list;
+  padding-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.375;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+  margin: 1rem 0;
+  position: relative;
+}
+
+.item:before {
+  font: bold 2.25rem/1 var(--font-number);
+  content: counter(list);
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: 0 1.5rem 0.75rem 0;
+  color: var(--bg);
+  background: var(--highlight1)
+    linear-gradient(to bottom right, var(--highlight1) 25%, var(--highlight2));
+  text-shadow: 0 0 2px var(--highlight1);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  shape-outside: ellipse();
+  z-index: 1;
+}
+
+.item:after {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background: var(--highlight1);
+  z-index: -1;
+  border-top-left-radius: 3px;
+}
+
+.headline {
+  padding: 0rem 0 0 0;
+  margin: 0 0 1rem 0;
+  font: normal 2rem var(--font-head);
+}
+
+img#bebiska {
+  transition: all 0.3s linear;
+}
+
+img#bebiska:hover {
+  transform: translateY(-5px);
 }
