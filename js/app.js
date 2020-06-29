@@ -75,8 +75,8 @@ class Ui {
     document.getElementById("spoonacular-recipes").innerHTML = "";
     const parent = document.getElementById("spoonacular-recipes");
     const singleRecipe = recipe[0].steps;
-    let test = 'test';
-    div.innerHTML = test;
+    // let test = 'test';
+    // div.innerHTML = test;
     const div = document.createElement("div");
     div.innerHTML += `<ol class="list">`;
 
